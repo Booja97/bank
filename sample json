@@ -1,0 +1,22 @@
+{
+    "name":"daniel",
+    "username":"daniel",
+    "password":"daniel",
+    "address":"address",
+    "state":"tn",
+    "country":"india",
+    "email":"daniel@gmail.com",
+    "pan":"7834287",
+    "contact":"7978349",
+    "dob":"984389",
+    "accounttype":"loan"
+}
+
+{
+  "name":"daniel",
+  "loantype":"bike",
+  "loanamount":"100000",
+  "date":"10/10/20",
+  "rateofinterest":"5%",
+  "durationofloan":"5"
+}

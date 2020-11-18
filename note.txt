@@ -1,0 +1,11 @@
+
+    
+npm install -g vue-cli
+npm i -g @vue/cli-init
+vue init webpack my-project
+cd my-project
+npm install
+npm run dev
+?
+    
+npm install axios

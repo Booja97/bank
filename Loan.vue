@@ -112,7 +112,7 @@ export default {
       }
       console.log(newLoan)
       axios
-        .post('http://127.0.0.1:5000/accounts/william/loans', newLoan)
+        .post('http://127.0.0.1:5000/accounts/login/' + newLoan.username + '/loans', newLoan)
         .then((response) => {
           console.log(response)
           router.push({ name: 'Login' })

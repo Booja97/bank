@@ -1,48 +1,37 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
-// import Users from '@/components/user'
 import Login from '@/components/login'
 import Register from '@/components/register'
+import Loan from '@/components/loan'
+import ViewLoans from '@/components/ViewLoans'
 import Accounts from '@/components/accountdetails'
-
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/accounts/login',
+      path: '/',
       name: 'Login',
       component: Login
     },
     {
       path: '/accounts/signup',
-      name: 'Register',
       component: Register
     },
     {
-      path: '/accounts/login/:username',
+      path: '/accounts/loans',
+      name: 'Loan',
+      component: Loan
+    },
+    {
+      path: '/accounts/showloans',
+      name: 'ViewLoans',
+      component: ViewLoans
+    },
+    {
+      path: '/accounts/login',
       name: 'accountdetails',
       component: Accounts
     }
-  //     children:[
-  //       {
-  //         path:'update',
-  //         component:Accounts
-  //       },
-  //       {
-  //         path:'applyloan',
-  //         component:Loans
-  //       },
-  //       {
-  //         path:'loans',
-  //         component:Loans
-  //       }
-  //   ]
-  //   },
-  //   {
-  //     path: '/logout',
-  //     component: Logout
-  //   }
-  // ]
-  ]})
+  ]
+})

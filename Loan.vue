@@ -83,13 +83,14 @@
 </template>
 
 <script>
-
+/*eslint-disable*/
 import axios from 'axios'
-import router from '../router'
+import router from '../router';
 export default {
   name: 'Loan',
   data () {
     return {
+      username: this.$route.params.username,
       Loan: {
         username: '',
         loan_type: '',
@@ -112,10 +113,12 @@ export default {
       }
       console.log(newLoan)
       axios
-        .post('http://127.0.0.1:5000/accounts/login/' + newLoan.username + '/loans', newLoan)
+        .post('http://127.0.0.1:5000/accounts/login/' + this.username + '/loans', newLoan)
         .then((response) => {
           console.log(response)
-          router.push({ name: 'Login' })
+          router.push({ name: 'ViewLoans' ,
+          params:{username:this.username}
+          })
         })
         .catch((error) => {
           console.log(error)

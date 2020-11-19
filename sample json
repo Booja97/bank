@@ -31,4 +31,4 @@
 [3:46 PM] Chimmani, Ramakrishna (Cognizant)
 btn btn-link btn-logout
 
-
+<router-link :to="{ name: 'accounts/showloans', params: { username: this.currentUser.username }}">{{this.currentUser.username}}</router-link>

@@ -9,3 +9,13 @@ npm run dev
 ?
     
 npm install axios
+aws
+def lambda_handler(event, context):
+ 
+    table = dynamodb.Table('users')
+    response = table.scan(FilterExpression=Attr('username').eq(event['username']) & Attr('password').eq(event['password'])  )
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps("Login successful")
+}
